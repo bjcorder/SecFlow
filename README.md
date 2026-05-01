@@ -21,10 +21,13 @@ It profiles application repositories, runs registered deterministic security too
 npm install
 npm run build
 npm run dev -- init
+npm run dev
 npm run dev -- audit .
 ```
 
 By default, LLM runtimes are disabled and scanner tools are detected from your local `PATH`. Enable runtimes in `.secflow/config.yaml` and pass `--approve-context` when you want a curated, redacted context package sent to a configured provider or local agent CLI.
+
+Running `npm run dev` launches the interactive TUI audit wizard. It walks through target selection, preflight checks, live audit progress, optional LLM context approval, and results/report review.
 
 ## Commands
 
